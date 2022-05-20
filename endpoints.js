@@ -2,7 +2,7 @@ var mysql = require('mysql');
 var tools = require('./tools');
 var validation = new tools();
 var con = mysql.createConnection({
-    host: process.env.HOST,
+    host: process.env.LOCALHOST,
     user: process.env.DB_USER,
     password: process.env.DB_PASSWORD,
     database: process.env.DB_NAME
