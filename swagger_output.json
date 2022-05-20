@@ -3,23 +3,98 @@
   "info": {
     "version": "1.0.0",
     "title": "AddressAPI",
-    "description": "Com o objetivo de auxiliar desenvolvedores, a AddressAPI disponibiliza dados geográficos no modelo REST."
+    "description": "Com o objetivo de auxiliar desenvolvedores, a AddressAPI disponibiliza dados geográficos no modelo REST.",
+    "contact": {
+      "email": "contato@addressapi.tech"
+    }
   },
-  "host": "127.0.0.1:3000",
+  "host": "addressapi.tech",
   "basePath": "/",
-  "schemes": [
-    "http"
+  "tags": [
+    {
+      "name": "CEP",
+      "description": "Consulta de localização pelo CEP."
+    },
+    {
+      "name": "Listagens",
+      "description": "Busque por listas de localizações utilizando uma string de referência."
+    }
   ],
+  "schemes": [
+    "https"
+  ],  
   "paths": {
     "/cep/{cep}": {
       "get": {
-        "description": "",
+        "tags":[ "CEP" ],
+        "description": "Este endpoint retorna informações do CEP informado.",
         "produces": [
           "application/json; charset=utf-8"
         ],
         "parameters": [
           {
             "name": "cep",
+            "in": "path",
+            "description": "Este valor deve conter apenas números.",
+            "required": true,
+            "type": "string | int"
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "OK"
+          }
+        }
+      }
+    },
+    "/listauf": {
+      "get": {
+        "tags":[ "Listagens" ],
+        "description": "Lista todas as unidades federativas do Brasil.",
+        "produces": [
+          "application/json; charset=utf-8"
+        ],
+        "parameters": [],
+        "responses": {
+          "200": {
+            "description": "OK"
+          }
+        }
+      }
+    },
+    "/listatodosestados": {
+      "get": {
+        "tags":[ "Listagens" ],
+        "description": "Lista todos os estados do Brasil.",
+        "produces": [
+          "application/json; charset=utf-8"
+        ],
+        "parameters": [],
+        "responses": {
+          "200": {
+            "description": "OK"
+          }
+        }
+      }
+    },
+    "/listaestados/{numero}/{valor}": {
+      "get": {
+        "tags":[ "Listagens" ],
+        "description": "Este endpoint retorna uma lista de até 5 estados.",
+        "produces": [
+          "application/json; charset=utf-8"
+        ],
+        "parameters": [
+          {
+            "name": "numero",
+            "description": "Corresponde ao número de itens contidos no JSON de resposta.",
+            "in": "path",
+            "required": true,
+            "type": "int"
+          },
+          {
+            "name": "valor",
+            "description": "Corresponde ao valor (estado) a ser pesquisado na base de dados.",
             "in": "path",
             "required": true,
             "type": "string"
@@ -34,19 +109,82 @@
     },
     "/listacidades/{numero}/{valor}": {
       "get": {
-        "description": "",
+        "tags":[ "Listagens" ],
+        "description": "Este endpoint retorna uma lista de até 5 cidades.",
         "produces": [
           "application/json; charset=utf-8"
         ],
         "parameters": [
           {
             "name": "numero",
+            "description": "Corresponde ao número de itens contidos no JSON de resposta.",
             "in": "path",
             "required": true,
-            "type": "string"
+            "type": "int"
           },
           {
             "name": "valor",
+            "description": "Corresponde ao valor (cidade) a ser pesquisado na base de dados.",
+            "in": "path",
+            "required": true,
+            "type": "string"
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "OK"
+          }
+        }
+      }
+    },
+    "/listabairros/{numero}/{valor}": {
+      "get": {
+        "tags":[ "Listagens" ],
+        "description": "Este endpoint retorna uma lista de até 5 bairros.",
+        "produces": [
+          "application/json; charset=utf-8"
+        ],
+        "parameters": [
+          {
+            "name": "numero",
+            "description": "Corresponde ao número de itens contidos no JSON de resposta.",
+            "in": "path",
+            "required": true,
+            "type": "int"
+          },
+          {
+            "name": "valor",
+            "description": "Corresponde ao valor (bairro) a ser pesquisado na base de dados.",
+            "in": "path",
+            "required": true,
+            "type": "string"
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "OK"
+          }
+        }
+      }
+    },
+    "/listarua/{numero}/{valor}": {
+      "get": {
+        "tags":[ "Listagens" ],
+        "description": "Este endpoint retorna uma lista de até 5 ruas.",
+        "produces": [
+          "application/json; charset=utf-8"
+        ],
+        "parameters": [
+          {
+            "name": "numero",
+            "description": "Corresponde ao número de itens contidos no JSON de resposta.",
+            "in": "path",
+            "required": true,
+            "type": "int"
+          },
+          {
+            "name": "valor",
+            "description": "Corresponde ao valor (rua) a ser pesquisado na base de dados.",
             "in": "path",
             "required": true,
             "type": "string"
