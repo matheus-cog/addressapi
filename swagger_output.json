@@ -37,7 +37,7 @@
             "in": "path",
             "description": "Este valor deve conter apenas números.",
             "required": true,
-            "type": "string | int"
+            "type": "string"
           }
         ],
         "responses": {
@@ -90,7 +90,7 @@
             "description": "Corresponde ao número de itens contidos no JSON de resposta.",
             "in": "path",
             "required": true,
-            "type": "int"
+            "type": "string"
           },
           {
             "name": "valor",
@@ -120,7 +120,7 @@
             "description": "Corresponde ao número de itens contidos no JSON de resposta.",
             "in": "path",
             "required": true,
-            "type": "int"
+            "type": "string"
           },
           {
             "name": "valor",
@@ -150,7 +150,7 @@
             "description": "Corresponde ao número de itens contidos no JSON de resposta.",
             "in": "path",
             "required": true,
-            "type": "int"
+            "type": "string"
           },
           {
             "name": "valor",
@@ -180,7 +180,7 @@
             "description": "Corresponde ao número de itens contidos no JSON de resposta.",
             "in": "path",
             "required": true,
-            "type": "int"
+            "type": "string"
           },
           {
             "name": "valor",
