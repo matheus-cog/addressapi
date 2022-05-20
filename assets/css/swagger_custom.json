@@ -1,0 +1,4 @@
+{
+    "customCss": ".topbar-wrapper img { content: url('http://127.0.0.1:3000/assets/img/logo.png'); padding: 7px }",
+    "customfavIcon": "http://localhost:3000/assets/img/logo_icon.svg"
+}

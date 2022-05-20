@@ -1,0 +1,175 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>AddressAPI</title>
+        <link rel="icon" href="http://localhost:3000/assets/img/logo_icon.svg">
+        <link rel="stylesheet" type="text/css" href="http://localhost:3000/assets/css/bootstrap.min.css" />
+        <link rel="stylesheet" href="http://localhost:3000/assets/css/shorthand.min.css" />
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Muli:200,300,400,500,600,700,800,900&display=swap" />
+        <link rel="stylesheet" type="text/css" href="http://localhost:3000/assets/css/slick.min.css" />
+        <link rel="stylesheet" type="text/css" href="http://localhost:3000/assets/css/slick-theme.css" />
+    </head>
+
+    <body class="bg-black muli">
+        <section id="home">
+            <nav class="w-100pc flex flex-column md-flex-row md-px-10 py-5">
+                <div class="flex justify-between ml-7">
+                    <a href="http://localhost:3000" class="flex items-center p-2 mr-4 no-underline">
+                        <img src="http://localhost:3000/assets/img/logo_icon.svg" />
+                        <img class="w-l20 h-l2" src="http://localhost:3000/assets/img/logo.png" />
+                    </a>
+                </div>
+                <div id="nav-items" class="hidden flex sm-w-100pc flex-column md-flex md-flex-row md-justify-end items-center">
+                    <a href="#home" class="fs-s1 mx-3 py-3 white no-underline hover-underline">Início</a>
+                    <a href="#precos" class="fs-s1 mx-3 py-3 white no-underline hover-underline">Preços</a>
+                    <a href="http://localhost:3000/docs" class="button bg-indigo white fw-600 no-underline mx-5">Documentação</a>
+                </div>
+            </nav>
+
+            <div style="margin-top: 5%;"></div>
+
+            <!-- Hero -->
+            <div class="min-h-60vh flex justify-start items-center">
+                <div class="mx-5 md-mx-l5">
+                    <div class="inline-block br-round bg-indigo-30 indigo-lightest p-2 fs-s2 mb-5">
+                        <div class="inline-block bg-indigo indigo-lightest br-round px-3 py-1 mr-3 fs-s3">Lançamento</div>
+                        <a class="mr-3 white" style="text-decoration: none;">O evento acontecerá dia 30/05/22.</a>
+                    </div>
+                    <div>
+                        <h1 class="white fs-l3 lh-2 md-fs-xl1 md-lh-1 fw-900">Um complemento<br />eficaz para seu app.</h1>
+                        <div class="white opacity-30 fs-m2" style="margin-top: 3%;">Com o objetivo de auxiliar desenvolvedores de software, a AddressAPI disponibiliza dados geográficos no modelo REST.</span>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <div class="p-10 md-p-l6">
+            <div class="flex flex-column md-flex-row mx-auto">
+                <div class="w-100pc md-w-40pc">
+                    <div class="br-8 p-5 m-5">
+                        <div class="flex justify-center items-center bg-indigo white w-l5 h-l5 br-round mb-5"><i
+                                data-feather="search" class="w-l5"></i></div>
+                        <h4 class="white fw-600 fs-m3 mb-5">Filtros</h4>
+                        <div class="indigo-lightest fw-600 fs-m1 lh-3 opacity-50">Endpoints extras para integrar e complementar a sua aplicação. Com isso você filtra somente as informações que deseja.</div>
+                    </div>
+                </div>
+                <div class="w-100pc md-w-40pc">
+                    <div class="br-8 p-5 m-5">
+                        <div class="flex justify-center items-center bg-indigo white w-l5 h-l5 br-round mb-5"><i
+                                data-feather="cpu" class="w-l5"></i></div>
+                        <h4 class="white fw-600 fs-m3 mb-5">Disponibilidade</h4>
+                        <div class="indigo-lightest fw-600 fs-m1 opacity-50">Hospedada na Google Cloud, nosso serviço utiliza a mesma estrutura da ferramenta com maior número de acessos do mundo!</div>
+                    </div>
+                </div>
+                <div class="w-100pc md-w-40pc">
+                    <div class="br-8 p-5 m-5">
+                        <div class="flex justify-center items-center bg-indigo white w-l5 h-l5 br-round mb-5"><i
+                                data-feather="database" class="w-l5"></i></div>
+                        <h4 class="white fw-600 fs-m3 mb-5">Banco de dados</h4>
+                        <div class="indigo-lightest fw-600 fs-m1 opacity-50">O banco de dados distribuído aos nossos usuários é equiparável ao dos correios.</div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <section id="precos" class="p-10 md-p-l5">
+            <div class="flex flex-wrap">
+                <div class="w-100pc md-w-50pc">
+                    <div class="p-5">
+                        <h4 class="white fw-800 fs-l3 mb-5">Preços</h4>
+                        <div class="indigo-lightest fw-800 fs-m1 opacity-80">Use seu primeiro mês grátis para uso comercial.</div>
+                        <div style="margin-top: 10%;"></div>
+                        <div class="md-w-50pc indigo-lightest fw-600 fs-m1 opacity-50">AddressAPI valoriza iniciativas acadêmicas e projetos open-source.
+                            Se você se encaixa neste perfil, entre em contato pelo e-mail <a class="fw-800 fs-m1 opacity-100 white" href="mailto:contato@addressapi.tech">contato@addressapi.tech</a>.</div>
+                    </div>
+                </div>
+                <div class="w-100pc md-w-25pc">
+                    <div class="m-3 p-5 br-8 bg-indigo-lightest-10 overflow-hidden">
+                        <div class="p-3">
+                            <h3 class="indigo">Gratuito</h3>
+                            <div class="white flex items-center">R$<span class="fs-l5 lh-1">0</span>/mês</div>
+                        </div>
+                        <div class="p-3 indigo-lightest fw-400 fs-s1 lh-5">
+                            <div>
+                                <i class="h-3 indigo" stroke-width="4" data-feather="check"></i>
+                                <span class="opacity-50">até 5.000 requisições/mês</span></div>
+                            <div>
+                                <i class="h-3 indigo" stroke-width="4" data-feather="check"></i>
+                                <span class="opacity-50">um domínio ou IP</span></div>
+                            <div>
+                                <i class="h-3" stroke-width="4" data-feather="x"></i>
+                                <span class="opacity-50">utilização em projetos comerciais</span></div>
+                        </div>
+                        <div class="p-3">
+                            <a href="http://localhost:3000/docs" style="text-decoration: none" class="button full bg-black white  hover-opacity-100 hover-scale-up-1 ease-300">COMEÇAR AGORA</a>
+                        </div>
+                    </div>
+                </div>
+                <div class="w-100pc md-w-25pc">
+                    <div class="m-3 p-5 br-8 bg-white overflow-hidden">
+                        <div class="p-3">
+                            <h3 class="indigo">Pro</h3>
+                            <div class="black flex items-center">R$<span class="fs-l5 lh-1">99</span>/mês</div>
+                        </div>
+                        <div class="p-3 black fw-400 fs-s1 lh-5">
+                            <div>
+                                <i class="h-3 indigo" stroke-width="4" data-feather="check"></i>
+                                <span class="opacity-50">até 1m requisições/mês</span></div>
+                            <div>
+                                <i class="h-3 indigo" stroke-width="4" data-feather="check"></i>
+                                <span class="opacity-50">até 5 domínios ou IP's</span></div>
+                            <div>
+                                <i class="h-3 indigo" stroke-width="4" data-feather="check"></i>
+                                <span class="opacity-50">utilização em projetos comerciais</span></div>
+                        </div>
+                        <div class="p-3">
+                            <a href="http://localhost:3000/docs" style="text-decoration: none" class="button full bg-indigo white hover-opacity-100 hover-scale-up-1 ease-300">COMEÇAR AGORA</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <div style="margin-top: 9%;"></div>
+
+        <!-- footer -->
+        <footer class="p-10 md-p-l2 bg-indigo-lightest-10">
+            <div class="container">
+                <div class="row">
+                  <div class="col-sm">
+                    <a href="https://github.com/matheus-cog" class="d-flex align-items-center white text-decoration-none">
+                        <img src="http://localhost:3000/assets/img/github.svg" width="10%" height="10%">
+                        <p style="margin-top: 5%; margin-left: 5%;">matheus-cog</p>
+                    </a>
+                  </div>
+                  <div class="col-sm">
+                    <a href="https://github.com/deboragoncalves1" class="d-flex align-items-center white text-decoration-none">
+                        <img src="http://localhost:3000/assets/img/github.svg" width="10%" height="10%">
+                        <p style="margin-top: 5%; margin-left: 5%;">deboragoncalves1</p>
+                    </a>
+                  </div>
+                  <div class="col-sm">
+                    <a href="https://github.com/JamirSoares" class="d-flex align-items-center white text-decoration-none">
+                        <img src="http://localhost:3000/assets/img/github.svg" width="10%" height="10%">
+                        <p style="margin-top: 5%; margin-left: 5%;">JamirSoares</p>
+                    </a>
+                  </div>
+                  <div class="col-sm">
+                    <a href="https://github.com/MSA2103" class="d-flex align-items-center white text-decoration-none">
+                        <img src="http://localhost:3000/assets/img/github.svg" width="10%" height="10%">
+                        <p style="margin-top: 5%; margin-left: 5%;">MSA2103</p>
+                    </a>
+                  </div>
+                </div>
+            <div>
+        </footer>
+        
+        <script src="http://localhost:3000/assets/js/jquery-3.4.1.min.js"></script>
+        <script src="http://localhost:3000/assets/js/feather.min.js"></script>
+        <script src="http://localhost:3000/assets/js/slick.min.js"></script>
+        <script src="http://localhost:3000/assets/js/smooth-scroll.polyfills.min.js"></script>
+        <script src="http://localhost:3000/assets/js/site_script.js"></script>
+    </body>
+</html>
