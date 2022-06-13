@@ -35,11 +35,14 @@
                 <div class="mx-5 md-mx-l5">
                     <div class="inline-block br-round bg-indigo-30 indigo-lightest p-2 fs-s2 mb-5">
                         <div class="inline-block bg-indigo indigo-lightest br-round px-3 py-1 mr-3 fs-s3">Lançamento</div>
-                        <a class="mr-3 white" style="text-decoration: none;">O evento acontecerá dia 30/05/22.</a>
+                        <a class="mr-3 white" style="text-decoration: none;">O evento acontecerá dia 13/06/22.</a>
                     </div>
                     <div>
                         <h1 class="white fs-l3 lh-2 md-fs-xl1 md-lh-1 fw-900">Um complemento<br />eficaz para seu app.</h1>
                         <div class="white opacity-30 fs-m2" style="margin-top: 3%;">Com o objetivo de auxiliar desenvolvedores de software, a AddressAPI disponibiliza dados geográficos no modelo REST.</span>
+                    </div>
+                    <div style="margin-top: 8%;">
+                        <a href="https://addressapi.tech/docs" style="text-decoration: none" class="button bg-indigo white hover-opacity-100 hover-scale-up-1 ease-300">COMEÇAR AGORA</a>
                     </div>
                 </div>
             </div>
@@ -49,7 +52,7 @@
             <div class="flex flex-column md-flex-row mx-auto">
                 <div class="w-100pc md-w-40pc">
                     <div class="br-8 p-5 m-5">
-                        <div class="flex justify-center items-center bg-indigo white w-l5 h-l5 br-round mb-5"><i
+                        <div class="flex justify-center items-center bg-indigo-lightest-10 white w-l5 h-l5 br-round mb-5"><i
                                 data-feather="search" class="w-l5"></i></div>
                         <h4 class="white fw-600 fs-m3 mb-5">Filtros</h4>
                         <div class="indigo-lightest fw-600 fs-m1 lh-3 opacity-50">Endpoints extras para integrar e complementar a sua aplicação. Com isso você filtra somente as informações que deseja.</div>
@@ -57,7 +60,7 @@
                 </div>
                 <div class="w-100pc md-w-40pc">
                     <div class="br-8 p-5 m-5">
-                        <div class="flex justify-center items-center bg-indigo white w-l5 h-l5 br-round mb-5"><i
+                        <div class="flex justify-center items-center bg-indigo-lightest-10 white w-l5 h-l5 br-round mb-5"><i
                                 data-feather="cpu" class="w-l5"></i></div>
                         <h4 class="white fw-600 fs-m3 mb-5">Disponibilidade</h4>
                         <div class="indigo-lightest fw-600 fs-m1 opacity-50">Hospedada na Google Cloud, nosso serviço utiliza a mesma estrutura da ferramenta com maior número de acessos do mundo!</div>
@@ -65,10 +68,34 @@
                 </div>
                 <div class="w-100pc md-w-40pc">
                     <div class="br-8 p-5 m-5">
-                        <div class="flex justify-center items-center bg-indigo white w-l5 h-l5 br-round mb-5"><i
+                        <div class="flex justify-center items-center bg-indigo-lightest-10 white w-l5 h-l5 br-round mb-5"><i
                                 data-feather="database" class="w-l5"></i></div>
                         <h4 class="white fw-600 fs-m3 mb-5">Banco de dados</h4>
                         <div class="indigo-lightest fw-600 fs-m1 opacity-50">O banco de dados distribuído aos nossos usuários é equiparável ao dos correios.</div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="p-10 md-p-l6">
+            <div style="border-radius: 15px;" class="flex flex-wrap bg-white w-100pc md-flex-row mx-auto">
+                <div class="w-100pc md-w-50pc p-5">
+                    <div class="p-10">
+                        <h4 class="black fw-800 fs-l3 mb-5">Teste agora!</h4>
+                        <div class="black-lightest fw-800 fs-m1 opacity-80">Insira seu CEP agora e verifique os resultados.</div>
+                        <div style="margin-top: 7%;"></div>
+                        <div class="input-group">
+                            <span class="input-group-text" id="basic-addon1">CEP</span>
+                            <input type="text" name="inputCep" id="inputCep" class="rounded-end form-control mr-4" oninput="this.value = this.value.replace(/[^0-9.]/g, '').replace(/(\..*)\./g, '$1');">
+                            <div>
+                                <a onclick="consultaCEP();" style="text-decoration: none" class="button bg-indigo white hover-opacity-100 hover-scale-up-1 ease-300">CONSULTAR</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="w-100pc md-w-50pc">
+                    <div class="br-8 p-5 m-5">
+                        <textarea readonly style="resize: none;" class="form-control" name="taCEP" id="taCEP" cols="30" rows="10"></textarea>
                     </div>
                 </div>
             </div>
@@ -171,5 +198,17 @@
         <script src="https://addressapi.tech/assets/js/slick.min.js"></script>
         <script src="https://addressapi.tech/assets/js/smooth-scroll.polyfills.min.js"></script>
         <script src="https://addressapi.tech/assets/js/site_script.js"></script>
+
+        <script>
+            function consultaCEP(){
+                var cep = document.getElementById('inputCep').value;
+                var response = "Não foi possível encontrar seu CEP.";
+                var url = 'https://addressapi.tech/cep/' + cep;
+                $.getJSON(url, function(data) {
+                    response = JSON.stringify(data, undefined, 4);
+                    $('#taCEP').text(response);
+                });
+            }
+        </script>
     </body>
 </html>
